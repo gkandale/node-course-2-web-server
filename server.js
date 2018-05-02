@@ -37,13 +37,18 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 });
 
-
-
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
         welcomeMessage: 'Welcome to our little website'
     });
+});
+
+app.get('/account',(req, res) => {
+    res.render('about.hbs', {
+        pageTitle: 'Account Creation Page'
+    });
+
 });
 
 app.get('/about',(req, res) => {
