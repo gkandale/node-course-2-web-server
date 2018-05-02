@@ -1,7 +1,6 @@
 node_modules/
-server.log
+log/server.log
 .idea/
 bin/
 routes/
 node-web-server.iml
-
