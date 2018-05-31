@@ -37,6 +37,9 @@ hbs.registerHelper('screamIt', (text) => {
     return text.toUpperCase();
 });
 
+// hbs.formHelpers.namespace('accountForm');
+//hbs.registerformHelpers.register('accountForm');
+
 app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
@@ -44,9 +47,17 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/account',(req, res) => {
-    res.render('about.hbs', {
+app.get('/signup',(req, res) => {
+    res.render('signup.hbs', {
         pageTitle: 'Account Creation Page'
+    });
+
+});
+
+app.post('/success',(req, res) => {
+    res.render('success.hbs', {
+        pageTitle: 'Thank you for signing up!',
+        welcomeMessage: 'Thank you for signing up for our little website'
     });
 
 });
