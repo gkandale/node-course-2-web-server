@@ -54,6 +54,12 @@ app.get('/signup',(req, res) => {
 
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.post('/success',(req, res) => {
     res.render('success.hbs', {
         pageTitle: 'Thank you for signing up!',
